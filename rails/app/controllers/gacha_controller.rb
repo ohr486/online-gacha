@@ -6,8 +6,10 @@ class GachaController < ApplicationController
   end
 
   def result
+    @reward = Reward.all.shuffle.first
   end
 
   def accept
+    @reward = Reward.all.shuffle.first
   end
 end

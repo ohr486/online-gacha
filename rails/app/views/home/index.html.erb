@@ -9,7 +9,11 @@
 
 <h2>報酬リスト</h2>
 
-報酬のリスト
-<br><br>
+<% @rewards.each do |reward| %>
+  <%= reward.name %>(確率:<%= reward.rate %>%)<br>
+  <%= reward.description %><br>
+  <img src="<%= reward.image_url %>" width="300px" hight="300px">
+  <hr>
+<% end %>
 
 <%= link_to "ガチャ結果", controller: "home", action: "result" %>

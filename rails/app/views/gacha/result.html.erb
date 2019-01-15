@@ -1,10 +1,15 @@
 <h1>ガチャ結果</h1>
 
 あなたが引いた報酬は
-<br><br>
-〜〜
-<br><br>
+
+<hr>
+<%= @reward.name %><br>
+<%= @reward.description %><br>
+<img src="<%= @reward.image_url %>" width="300px" hight="300px">
+<hr>
+
 です
+
 <br><br>
 
 <%= link_to "ガチャ結果の確定", controller: "gacha", action: "accept" %>
