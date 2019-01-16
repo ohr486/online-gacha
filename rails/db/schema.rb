@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_15_012337) do
+ActiveRecord::Schema.define(version: 1) do
 
   create_table "rewards", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.float "rate"
     t.string "image_url"
+    t.integer "possession_count"
+    t.integer "distributed_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

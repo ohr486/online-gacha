@@ -9,6 +9,8 @@
       <th>Description</th>
       <th>Rate</th>
       <th>ImageUrl</th>
+      <th>PossesionCount</th>
+      <th>DistributedCount</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +22,8 @@
         <td><%= reward.description %></td>
         <td><%= reward.rate %></td>
         <td><%= reward.image_url %></td>
+        <td><%= reward.possession_count %></td>
+        <td><%= reward.distributed_count %></td>
         <td><%= link_to 'Show', [:admin, reward] %></td>
         <td><%= link_to 'Edit', edit_admin_reward_path(reward) %></td>
         <td><%= link_to 'Destroy', [:admin, reward], method: :delete, data: { confirm: 'Are you sure?' } %></td>

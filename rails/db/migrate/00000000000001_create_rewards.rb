@@ -5,6 +5,8 @@ class CreateRewards < ActiveRecord::Migration[5.2]
       t.string :description
       t.float :rate
       t.string :image_url
+      t.integer :possession_count
+      t.integer :distributed_count
 
       t.timestamps
     end

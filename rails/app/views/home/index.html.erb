@@ -1,6 +1,9 @@
-<h1>Onlineガシャ</h1>
+<%= image_tag("gacha.png", width: "100%") %>
 
-<%= link_to "今すぐ引く", controller: "gacha", action: "pre" %>
+<%= link_to controller: "gacha", action: "pre" do %>
+  <br>
+  <%= image_tag("do_gacha.png", width: "25%") %>
+<% end %>
 
 <h2>遊び方</h2>
 
@@ -9,9 +12,10 @@
 
 <h2>報酬リスト</h2>
 
-<% @rewards.each do |reward| %>
+<% @rewards.each_with_index do |reward, i| %>
   <%= reward.name %>(確率:<%= reward.rate %>%)<br>
   <%= reward.description %><br>
+  残数:<%= reward.possession_count - reward.distributed_count %><br>
   <img src="<%= reward.image_url %>" width="300px" hight="300px">
   <hr>
 <% end %>

@@ -1,4 +1,9 @@
-<h1>Gacha#accept</h1>
-<p>Find me in app/views/gacha/accept.html.erb</p>
+<h1>景品受け取り</h1>
 
-<%= link_to "ガチャ景品を受け取る", controller: "home", action: "index" %>
+<hr>
+<%= @reward.name %><br>
+<%= @reward.description %><br>
+<img src="<%= @reward.image_url %>" width="300px" hight="300px">
+<hr>
+
+<%= link_to "ガチャ景品を受け取りますか?", controller: "home", action: "index" %>

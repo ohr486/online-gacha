@@ -1,5 +1,6 @@
-<h1>ガチャ結果</h1>
+<%= image_tag("cong.png", width: "100%") %>
 
+<br><br>
 あなたが引いた報酬は
 
 <hr>
@@ -12,4 +13,6 @@
 
 <br><br>
 
-<%= link_to "ガチャ結果の確定", controller: "gacha", action: "accept" %>
+<%= link_to controller: "gacha", action: "accept" do %>
+  <%= image_tag("accept.png", width: "25%") %>
+<% end %>
