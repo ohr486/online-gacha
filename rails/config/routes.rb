@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :rewards
+    resources :users
   end
 
   root to: 'home#index'
