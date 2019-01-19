@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   get 'gacha/effect'
   get 'gacha/result'
   get 'gacha/accept'
+
+  get "/auth/:provider/callback", to: "session#create"
+  get "/logout", to: "session#destroy"
 end
