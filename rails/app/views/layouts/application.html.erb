@@ -10,11 +10,6 @@
   </head>
 
   <body>
-    <header>
-      <% if logged_in? %>
-        <%= link_to "[debug]ガチャひきなおし", "/logout" %>
-      <% end %>
-    </header>
     <%= yield %>
   </body>
 </html>
