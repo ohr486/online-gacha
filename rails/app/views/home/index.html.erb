@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-sm-12 text-center">
       <% if logged_in? %>
-        結果を確認
+        <%= link_to "結果を確認", controller: :gacha, action: :result %>
       <% else %>
         <%= link_to "/auth/twitter" do %>
           <%= image_tag("do_gacha.png", width: "25%") %>
@@ -17,24 +17,39 @@
     </div>
   </div>
 
-</div>
-
-
-
-<h2>遊び方</h2>
-
-遊び方の説明
-<br><br>
-
-<h2>報酬リスト</h2>
-
-<% @rewards.each_with_index do |reward, i| %>
-  <%= reward.name %>(確率:<%= reward.rate %>%)<br>
-  <%= reward.description %><br>
-  残数:<%= reward.possession_count - reward.distributed_count %><br>
-  <img src="<%= reward.image_url %>" width="300px" hight="300px">
   <hr>
-<% end %>
 
-<%= link_to "ガチャ結果", controller: "home", action: "result" %>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>遊び方</h2>
+    </div>
+  </div>
+    
+  <div class="row">
+    <div class="col-sm-12 text-center">
+    1. 「引」ボタンを押してガチャを引いてください<br>
+    2. ブースまでお越しください<br>
+    3. 結果画面をブースのスタッフに見せてください<br>
+    4. 結果画面の景品を受け取ってください<br>
+    </div>
+  </div>
 
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>景品</h2>
+    </div>
+  </div>
+
+  <% @rewards.each_with_index do |reward, i| %>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <%= reward.name %>(確率:<%= reward.rate %>%)<br>
+        <%= reward.description %><br>
+        残数:<%= reward.possession_count - reward.distributed_count %><br>
+        <img src="<%= reward.image_url %>" width="300px" hight="300px">
+      </div>
+    </div>
+  <% end %>
+</div>

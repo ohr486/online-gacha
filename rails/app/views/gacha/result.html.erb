@@ -1,18 +1,29 @@
-<%= image_tag("cong.png", width: "100%") %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <%= image_tag("cong.png", width: "100%") %>
+    </div>
+  </div>
 
-<br><br>
-あなたが引いた報酬は
+  <hr>
 
-<hr>
-<%= @reward.name %><br>
-<%= @reward.description %><br>
-<img src="<%= @reward.image_url %>" width="300px" hight="300px">
-<hr>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+    あなたが引いた景品は
+    </div>
+  </div>
 
-です
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <%= @reward.name %><br>
+      <img src="<%= @reward.image_url %>" width="300px" hight="300px">
+    </div>
+  </div>
 
-<br><br>
-
-<%= link_to controller: "gacha", action: "accept" do %>
-  <%= image_tag("accept.png", width: "25%") %>
-<% end %>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+    です<br>
+    この画面をブーススタッフに見せて景品を交換してください。
+    </div>
+  </div>
+</div>

@@ -3,14 +3,14 @@ class GachaController < ApplicationController
   end
 
   def effect
-    @reward = Reward.all.shuffle.first
+    Result.do_gacha(current_user)
   end
 
   def result
-    @reward = Reward.all.shuffle.first
+    result = Result.find_by(user_id: current_user.id)
+    @reward = Reward.find(result.reward_id)
   end
 
   def accept
-    @reward = Reward.all.shuffle.first
   end
 end
