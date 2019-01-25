@@ -8,15 +8,15 @@
 
 Reward.create!(name: "プランニングポーカー", rate: 12.12,
                description: "ドリコム特製プランニングポーカー",
-               image_url: "http://placehold.it/350x150",
+               image_url: "/assets/reward_poker.png",
                possession_count: 40, distributed_count: 0)
 
 Reward.create!(name: "Tシャツ", rate: 15.15,
                description: "サイズに限りがありますのでお早めにお受け取りください",
-               image_url: "http://placehold.it/350x150",
+               image_url: "/assets/reward_T-shirt.png",
                possession_count: 50, distributed_count: 0)
 
 Reward.create!(name: "ステッカー", rate: 72.73,
                description: "ドリコムロゴステッカー",
-               image_url: "http://placehold.it/350x150",
+               image_url: "/assets/reward_sticker.png",
                possession_count: 500, distributed_count: 0)
