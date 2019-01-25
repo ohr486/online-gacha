@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @result.user_id %>
+</p>
+
+<p>
+  <strong>Reward:</strong>
+  <%= @result.reward_id %>
+</p>
+
+<%= link_to 'Edit', edit_admin_result_path(@result) %> |
+<%= link_to 'Back', admin_results_path %>

@@ -6,7 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-(0..4).each do |i|
-  Reward.create!(name: "報酬#{i}", description: "報酬#{i}の説明", rate: 5.0,
-                 image_url: "http://placehold.it/350x150##{i}", possession_count: 10+i, distributed_count: i)
-end
+Reward.create!(name: "プランニングポーカー", rate: 12.12,
+               description: "ドリコム特製プランニングポーカー",
+               image_url: "http://placehold.it/350x150",
+               possession_count: 40, distributed_count: 0)
+
+Reward.create!(name: "Tシャツ", rate: 15.15,
+               description: "サイズに限りがありますのでお早めにお受け取りください",
+               image_url: "http://placehold.it/350x150",
+               possession_count: 50, distributed_count: 0)
+
+Reward.create!(name: "ステッカー", rate: 72.73,
+               description: "ドリコムロゴステッカー",
+               image_url: "http://placehold.it/350x150",
+               possession_count: 500, distributed_count: 0)

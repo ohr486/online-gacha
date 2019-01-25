@@ -12,16 +12,9 @@
   <body>
     <header>
       <% if logged_in? %>
-        <%= link_to "logout", "/logout" %>
-      <% else %>
-        <%= link_to "login", "/auth/twitter" %>
+        <%= link_to "[debug]ガチャひきなおし", "/logout" %>
       <% end %>
     </header>
-    <% if flash[:notice] %>
-      <div class="notice">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get "/yapc" => redirect("/")
+
   namespace :admin do
     resources :rewards
     resources :users
+    resources :results
   end
 
   root to: 'home#index'
