@@ -3,7 +3,11 @@ worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 timeout 15
 preload_app true  # 更新時ダウンタイム無し
 
-listen "/tmp/unicorn.sock"
+working_directory "/var/www/online-gacha/rails"
+
+listen "/var/run/unicorn.sock"
+listen 8080, :tcp_nopush => true
+
 pid "/tmp/unicorn.pid"
 
 before_fork do |server, worker|
