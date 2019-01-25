@@ -12,7 +12,7 @@ class Reward < ApplicationRecord
   def self.choose
     base = []
     candidate.each do |c|
-      c.count.times do
+      c[:count].times do
         base << c[:reward_id]
       end
     end
