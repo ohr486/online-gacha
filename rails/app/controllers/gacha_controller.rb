@@ -3,6 +3,7 @@ class GachaController < ApplicationController
   end
 
   def effect
+    @reward = Reward.all.shuffle.first
   end
 
   def result

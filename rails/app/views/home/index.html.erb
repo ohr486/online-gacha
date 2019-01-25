@@ -1,9 +1,25 @@
-<%= image_tag("gacha.png", width: "100%") %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <%= image_tag("gacha.png", width: "100%") %>
+    </div>
+  </div>
 
-<%= link_to controller: "gacha", action: "pre" do %>
-  <br>
-  <%= image_tag("do_gacha.png", width: "25%") %>
-<% end %>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <% if logged_in? %>
+        結果を確認
+      <% else %>
+        <%= link_to "/auth/twitter" do %>
+          <%= image_tag("do_gacha.png", width: "25%") %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+
 
 <h2>遊び方</h2>
 
@@ -21,3 +37,4 @@
 <% end %>
 
 <%= link_to "ガチャ結果", controller: "home", action: "result" %>
+
