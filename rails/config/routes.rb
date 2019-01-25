@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "/yapc" => redirect("/")
+  get "/yapc" => redirect("https://special.drecom.co.jp")
 
   namespace :admin do
     resources :rewards
