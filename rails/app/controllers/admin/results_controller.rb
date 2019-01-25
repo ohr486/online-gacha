@@ -1,4 +1,4 @@
-class Admin::ResultsController < ApplicationController
+class Admin::ResultsController < Admin::ApplicationController
   before_action :set_result, only: [:show, :edit, :update, :destroy]
 
   # GET /results

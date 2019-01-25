@@ -1,4 +1,4 @@
-class Admin::RewardsController < ApplicationController
+class Admin::RewardsController < Admin::ApplicationController
   before_action :set_reward, only: [:show, :edit, :update, :destroy]
 
   # GET /rewards
