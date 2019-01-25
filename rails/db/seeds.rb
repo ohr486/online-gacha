@@ -8,15 +8,15 @@
 
 Reward.create!(name: "プランニングポーカー", rate: 12.12,
                description: "ドリコム特製プランニングポーカー",
-               image_url: "/assets/reward_poker.png",
+               image_url: "https://s3-ap-northeast-1.amazonaws.com/ohr-asset-test/reward_poker.png",
                possession_count: 40, distributed_count: 0)
 
 Reward.create!(name: "Tシャツ", rate: 15.15,
                description: "サイズに限りがありますのでお早めにお受け取りください",
-               image_url: "/assets/reward_T-shirt.png",
+               image_url: "https://s3-ap-northeast-1.amazonaws.com/ohr-asset-test/reward_T-shirt.png",
                possession_count: 50, distributed_count: 0)
 
 Reward.create!(name: "ステッカー", rate: 72.73,
                description: "ドリコムロゴステッカー",
-               image_url: "/assets/reward_sticker.png",
+               image_url: "https://s3-ap-northeast-1.amazonaws.com/ohr-asset-test/reward_sticker.png",
                possession_count: 500, distributed_count: 0)
