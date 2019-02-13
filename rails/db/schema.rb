@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "provider"
     t.string "uid"
     t.string "user_name"
+    t.string "user_nickname"
     t.string "image_url"
+    t.string "token"
+    t.string "secret"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
