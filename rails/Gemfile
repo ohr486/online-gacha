@@ -40,6 +40,9 @@ gem 'bootstrap', '~> 4.1.1'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'twitter'
+
+gem 'dotenv-rails'
 
 gem 'unicorn'
 
