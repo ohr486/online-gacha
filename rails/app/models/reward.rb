@@ -3,7 +3,7 @@ class Reward < ApplicationRecord
     candidate = []
     Reward.all.each do |r|
       if r.enable?
-        candidate << {reward_id: r.id, count: r.possession_count}
+        candidate << {reward_id: r.id, count: r.rate.to_i}
       end
     end
     candidate
