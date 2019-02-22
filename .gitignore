@@ -3,3 +3,6 @@
 
 # for editor
 *.swp
+
+# for ide
+.impl
