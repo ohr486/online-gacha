@@ -10,3 +10,8 @@ Reward.create!(name: "Tシャツ", rate: 18.8,
                description: "サイズに限りがありますのでお早めにお受け取りください",
                image_url: "https://s3-ap-northeast-1.amazonaws.com/ohr-asset-test/reward_rk2019_T-shirt.jpg",
                possession_count: 94, distributed_count: 0)
+
+Reward.create!(name: "参加賞", rate: 81.2,
+               description: "缶バッジには種類があります",
+               image_url: "https://s3-ap-northeast-1.amazonaws.com/ohr-asset-test/reward_rk2019_hazure.jpg",
+               possession_count: 650, distributed_count: 0)
