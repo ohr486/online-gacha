@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Reward.create!(name: "Tシャツ", rate: 18.8,
+Reward.create!(name: "Tシャツ", rate: 35.0,
                description: "サイズに限りがありますのでお早めにお受け取りください",
-               image_url: "https://s3-ap-northeast-1.amazonaws.com/ohr-asset-test/reward_rk2019_T-shirt.jpg",
-               possession_count: 94, distributed_count: 0)
+               image_url: "https://ohr-asset-test.s3-ap-northeast-1.amazonaws.com/reward_T-shirt.png",
+               possession_count: 75, distributed_count: 0)
 
-Reward.create!(name: "参加賞", rate: 81.2,
-               description: "缶バッジには種類があります",
-               image_url: "https://s3-ap-northeast-1.amazonaws.com/ohr-asset-test/reward_rk2019_hazure.jpg",
-               possession_count: 650, distributed_count: 0)
+Reward.create!(name: "参加賞", rate: 65.0,
+               description: "ドリコムステッカー・ノート",
+               image_url: "https://ohr-asset-test.s3-ap-northeast-1.amazonaws.com/reward_note.JPG",
+               possession_count: 165, distributed_count: 0)
