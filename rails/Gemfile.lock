@@ -91,6 +91,8 @@ GEM
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.10.0)
+    global (1.1.0)
+      activesupport (>= 2.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     google-analytics-rails (1.1.1)
@@ -262,6 +264,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   dotenv-rails
+  global
   google-analytics-rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
