@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <%= image_tag("gacha.png", width: "100%") %>
+      <%= image_tag("ac2019.png", width: "100%") %>
     </div>
   </div>
 
@@ -9,11 +9,11 @@
     <div class="col-sm-12 text-center">
       <% if logged_in? %>
         <%= link_to controller: :gacha, action: :result do %>
-          <button type="button" class="btn btn-success btn-lg btn-block">結果を確認(check result)</button>
+          <button type="button" class="btn btn-success btn-lg btn-block">[抽選権獲得状況]</button>
         <% end %>
       <% else %>
         <%= link_to "/auth/twitter" do %>
-          <%= image_tag("do_gacha.png", width: "25%") %>
+          [拡散する]
         <% end %>
       <% end %>
     </div>
@@ -23,33 +23,27 @@
 
   <div class="row">
     <div class="col-sm-12 text-center">
-      <h1>遊び方(how to play)</h1>
+      <h1>TID拡散方法</h1>
     </div>
   </div>
     
   <div class="row">
     <div class="col-sm-12 text-center">
-    <h2>1. 「引」ボタンを押してガチャを引いてください(push 「引」 button)</h2>
-    <h2>2. ブースまでお越しください(come to Drecom booth area)</h2>
-    <h2>3. 結果画面をブースのスタッフに見せてください(show result page to booth staff)</h2>
-    <h2>4. 結果画面の景品を受け取ってください(receive gacha gift)</h2>
+    <h2>1. 「拡散する」ボタンを押す</h2>
+    <h2>2. Twitter連携アプリの認証</h2>
+    <h2>3. TIDの記事がリツイートされます</h2>
+    <h2>4. AC2019の打ち上げにて抽選を実施します</h2>
+    <h2>5. 抽選にあたれば豪華景品がもらえます</h2>
     </div>
   </div>
 
   <hr>
-
-  <div class="row">
-    <div class="col-sm-12 text-center">
-      <h1>景品(gacha gift)</h1>
-    </div>
-  </div>
 
   <% @rewards.each_with_index do |reward, i| %>
     <div class="row">
       <div class="col-sm-12 text-center">
         <h2><%= reward.name %></h2>
         <h2><%= reward.description %></h2>
-        <h2>残数(remaining):<%= reward.possession_count - reward.distributed_count %></h2>
         <img src="<%= reward.image_url %>" width="300px" hight="300px">
       </div>
     </div>

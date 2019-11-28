@@ -4,7 +4,12 @@ class GachaController < ApplicationController
 
   def effect
     Result.do_gacha(current_user)
-    twitter_client.follow(ENV["FOLLOW_ACC"])
+
+    # follow twitter acc
+    #twitter_client.follow(ENV["FOLLOW_ACC"])
+
+    # retweet
+    # TIDの最新記事をretweet
   end
 
   def result
