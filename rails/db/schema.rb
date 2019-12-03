@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 4) do
 
   create_table "results", force: :cascade do |t|
     t.integer "user_id"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "image_url"
     t.integer "possession_count"
     t.integer "distributed_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tweet_templates", force: :cascade do |t|
+    t.date "tweet_day"
+    t.text "message"
+    t.text "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
