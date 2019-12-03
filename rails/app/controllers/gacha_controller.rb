@@ -9,7 +9,8 @@ class GachaController < ApplicationController
     #twitter_client.follow(ENV["FOLLOW_ACC"])
 
     # retweet
-    # TIDの最新記事をretweet
+    rt_id = TweetTemplate.retweet_target
+    twitter_client.retweets(rt_id)
   end
 
   def result
