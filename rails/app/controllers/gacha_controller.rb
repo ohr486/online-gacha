@@ -10,7 +10,7 @@ class GachaController < ApplicationController
 
     # retweet
     rt_id = TweetTemplate.retweet_target
-    twitter_client.retweet(rt_id)
+    twitter_client.retweet(rt_id) rescue nil
   end
 
   def result
