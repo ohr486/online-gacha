@@ -8,6 +8,10 @@ class TweetTemplate < ApplicationRecord
     end
   end
 
+  def self.random_retweet_target
+    TweetTemplate.where("id >= ?", rand(TweetTemplate.first.id..TweetTemplate.last.id)).first.link
+  end
+
   def self.default_tweet_id
     # https://twitter.com/DRECOM_TECH/status/1200248284566061056
     1200248284566061056

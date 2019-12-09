@@ -9,7 +9,8 @@ class GachaController < ApplicationController
     #twitter_client.follow(ENV["FOLLOW_ACC"])
 
     # retweet
-    rt_id = TweetTemplate.retweet_target
+    # rt_id = TweetTemplate.retweet_target # 当日のtweet
+    rt_id = TweetTemplate.random_retweet_target # randomなtweet
     twitter_client.retweet(rt_id) rescue nil
   end
 
