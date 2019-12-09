@@ -9,7 +9,12 @@ class TweetTemplate < ApplicationRecord
   end
 
   def self.random_retweet_target
-    TweetTemplate.where("id >= ?", rand(TweetTemplate.first.id..TweetTemplate.last.id)).first.link
+    retweet_id = self.where(tweet_day: Date.today).shuffle.first&.link
+    if retweet_id
+      retweet_id.to_i
+    else
+      default_tweet_id
+    end
   end
 
   def self.default_tweet_id
