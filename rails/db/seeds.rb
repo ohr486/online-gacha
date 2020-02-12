@@ -14,4 +14,4 @@ Reward.create!(name: "Drecomマグカップ", rate: 35.0,
 Reward.create!(name: "参加賞", rate: 65.0,
                description: "ドリコムステッカー・ノート",
                image_url: "https://ohr-asset-test.s3-ap-northeast-1.amazonaws.com/reward_note.JPG",
-               possession_count: 165, distributed_count: 0)
+               possession_count: 100, distributed_count: 0)
