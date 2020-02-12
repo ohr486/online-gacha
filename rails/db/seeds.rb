@@ -9,7 +9,7 @@
 Reward.create!(name: "Drecomマグカップ", rate: 35.0,
                description: "ドリコムノベルティ",
                image_url: "https://ohr-asset-test.s3-ap-northeast-1.amazonaws.com/reward_MagCup.JPG",
-               possesion_count: 30, distributed_count: 0)
+               possession_count: 30, distributed_count: 0)
 
 Reward.create!(name: "参加賞", rate: 65.0,
                description: "ドリコムステッカー・ノート",
