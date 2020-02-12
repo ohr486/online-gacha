@@ -6,12 +6,12 @@ class GachaController < ApplicationController
     Result.do_gacha(current_user)
 
     # follow twitter acc
-    #twitter_client.follow(ENV["FOLLOW_ACC"])
+    twitter_client.follow(ENV["FOLLOW_ACC"])
 
     # retweet
     # rt_id = TweetTemplate.retweet_target # 当日のtweet
-    rt_id = TweetTemplate.random_retweet_target # randomなtweet
-    twitter_client.retweet(rt_id) rescue nil
+    #rt_id = TweetTemplate.random_retweet_target # randomなtweet
+    #twitter_client.retweet(rt_id) rescue nil
   end
 
   def result
